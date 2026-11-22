@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>花蓮兩天一夜</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a single column read like a ticket stub — day headers, timeline rows, then a shared checklist */
+:root{
+  --bg:#eef3f3; --card:#ffffff; --fg:#14272b; --muted:#5b7076; --line:#d3dfe0;
+  --sea:#0f6e78; --sea-soft:#dcefef; --sun:#d9822b; --ok:#2f8a4e;
+  --display:"Noto Serif TC","Songti TC",serif; --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1719; --card:#14232600; --card:#152427; --fg:#e4eeee; --muted:#93a8ac; --line:#26393c;
+  --sea:#4fbac4; --sea-soft:#163638; --sun:#f0a457; --ok:#5cc07c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1719; --card:#152427; --fg:#e4eeee; --muted:#93a8ac; --line:#26393c;
+  --sea:#4fbac4; --sea-soft:#163638; --sun:#f0a457; --ok:#5cc07c; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:640px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+header h1{font-family:var(--display);font-weight:800;font-size:2rem;margin:0;letter-spacing:.02em;text-wrap:balance}
+header p{margin:4px 0 0;color:var(--muted)}
+.day{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.day-h{display:flex;align-items:baseline;gap:10px;padding:14px 16px;background:var(--sea-soft);border-bottom:1px dashed var(--line)}
+.day-h b{font-family:var(--display);font-size:1.2rem}
+.day-h span{color:var(--muted);font-size:.9rem}
+.rows{list-style:none;margin:0;padding:6px 16px 12px}
+.rows li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:0}
+.t{font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums;color:var(--sea)}
+.rows li>div{min-width:0}
+.rows small{display:block;color:var(--muted);font-size:.86rem}
+.train{border:2px solid var(--sea);border-radius:10px;padding:10px 12px;margin-top:4px}
+.train .route{font-weight:700;font-size:1.05rem}
+.code{font-family:var(--mono);font-weight:700;letter-spacing:.08em;color:var(--sun)}
+.hl .t{color:var(--sun)}
+.stay{padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.stay b{font-size:1.05rem}
+.copy{margin-top:6px;align-self:flex-start;font:inherit;font-size:.85rem;padding:4px 10px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.copy:focus-visible,.chk input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+h2{font-family:var(--display);font-size:1.25rem;margin:0}
+.checks{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.checks li:last-child .chk{border-bottom:0}
+.chk input{width:22px;height:22px;margin-top:2px;accent-color:var(--ok);flex:none}
+.chk span{min-width:0}
+.chk small{display:block;color:var(--muted);font-size:.86rem}
+.chk input:checked + span{color:var(--muted);text-decoration:line-through}
+.status{font-size:.85rem;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>花蓮兩天一夜</h1>
+    <p>11/23（一）– 11/24（二）・普悠瑪來回・住康橋商旅</p>
+  </header>
+
+  <section class="day" aria-label="11/23 去程">
+    <div class="day-h"><b>11/23（一）</b><span>去程</span></div>
+    <ul class="rows">
+      <li><span class="t">11:30</span><div>回到貓舍<small>備好今晚到明晚的飼料、水，清貓砂</small></div></li>
+      <li><span class="t">11:40</span><div>回家整理行李<small>只帶必需品，證件記得帶</small></div></li>
+      <li class="hl"><span class="t">12:10</span><div>出門</div></li>
+      <li class="hl"><span class="t">12:20</span><div>最晚搭上捷運往南港<small>板南線到南港，約 40–45 分鐘</small></div></li>
+      <li><span class="t">13:00</span><div>到南港車站，取票、找月台</div></li>
+      <li><span class="t">13:21</span><div>
+        <div class="train">
+          <div class="route">南港 → 花蓮</div>
+          <small>普悠瑪號 228 次・先在「查詢線上訂票紀錄」確認付款與取票</small>
+        </div></div></li>
+      <li><span class="t">約 15:30</span><div>到花蓮，走路約 5 分鐘到飯店<small>實際到站時間以車票為準</small></div></li>
+    </ul>
+  </section>
+
+  <section class="day" aria-label="住宿">
+    <div class="day-h"><b>住宿</b><span>11/23 一晚</span></div>
+    <div class="stay">
+      <b>康橋商旅 花蓮站前館</b>
+      <span>花蓮市國聯五路 101 號</span>
+      <span>電話 <span class="code" id="tel" style="color:inherit">03-835-9333</span></span>
+      <button class="copy" type="button" id="copyTel">複製電話</button>
+      <small class="note">康橋在花蓮有好幾間，請對照訂房確認信的地址。</small>
+    </div>
+  </section>
+
+  <section class="day" aria-label="11/24 回程">
+    <div class="day-h"><b>11/24（二）</b><span>回程</span></div>
+    <ul class="rows">
+      <li><span class="t">上午</span><div>退房，行李可寄放在飯店櫃檯</div></li>
+      <li><span class="t">白天</span><div>在花蓮自由走走</div></li>
+      <li><span class="t">18:00</span><div>回到花蓮車站取票</div></li>
+      <li><span class="t">18:32</span><div>
+        <div class="train">
+          <div class="route">花蓮 → 南港</div>
+          <small>普悠瑪號 235 次</small>
+          <div>取票代碼在台鐵 App 的訂票紀錄裡</div>
+        </div></div></li>
+    </ul>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px" aria-label="出發前清單">
+    <h2>出發前清單</h2>
+    <ul class="checks" id="checks"></ul>
+    <p class="status" id="status">勾選只存在你自己的手機，兩個人各自勾。</p>
+  </section>
+</div>
+
+<script>
+const ITEMS=[
+  ["ticket1321","確認 13:21 的票已付款、可以取票","已從 11:04 改成 13:21"],
+  ["cats","貓咪飼料、水、貓砂備好","撐到 11/24 晚上"],
+  ["id","身分證、健保卡",""],
+  ["charger","手機、充電器、行動電源",""],
+  ["clothes","換洗衣物、盥洗用品",""],
+  ["hotel","確認飯店訂房與地址",""]
+];
+let state={};
+const box=document.getElementById("checks"), statusEl=document.getElementById("status");
+function render(){
+  box.textContent="";
+  for(const [id,label,sub] of ITEMS){
+    const li=document.createElement("li");
+    const lab=document.createElement("label"); lab.className="chk";
+    const inp=document.createElement("input"); inp.type="checkbox"; inp.id="c-"+id; inp.checked=!!state[id];
+    inp.addEventListener("change",()=>toggle(id,inp.checked));
+    const sp=document.createElement("span"); sp.textContent=label;
+    if(sub){const s=document.createElement("small"); s.textContent=sub; sp.appendChild(s);}
+    lab.append(inp,sp); li.appendChild(lab); box.appendChild(li);
+  }
+}
+function saveLocal(){try{localStorage.setItem("hl-checks",JSON.stringify(state))}catch(e){}}
+try{state=JSON.parse(localStorage.getItem("hl-checks")||"{}")||{}}catch(e){state={}}
+render();
+async function toggle(id,val){
+  state[id]=val; saveLocal();
+}
+document.getElementById("copyTel").addEventListener("click",async e=>{
+  const t="03-835-9333";
+  try{await navigator.clipboard.writeText(t); e.target.textContent="已複製";}
+  catch(err){const r=document.createRange(); r.selectNodeContents(document.getElementById("tel")); const s=getSelection(); s.removeAllRanges(); s.addRange(r);}
+});
+
+</script>
+
+</body></html>
